@@ -1,7 +1,8 @@
 import { Heading } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
 interface PageTitleProps {
-  children: string;
+  children: ReactNode;
 }
 
 export function PageTitle({ children }: PageTitleProps) {
