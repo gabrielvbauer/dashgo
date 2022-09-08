@@ -23,11 +23,13 @@ async function getUsers(page: number): Promise<GetUsersResponse> {
   const totalCount = Number(headers['x-total-count']);
 
   const users = data.users.map(user => {
+    console.log(user)
+
     return {
       id: user.id,
       name: user.name,
       email: user.email,
-      createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
+      createdAt: new Date(user.created_at).toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
         year: 'numeric'
